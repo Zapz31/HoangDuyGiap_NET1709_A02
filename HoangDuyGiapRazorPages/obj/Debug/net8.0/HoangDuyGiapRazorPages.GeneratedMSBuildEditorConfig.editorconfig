@@ -22,6 +22,22 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/CategoryPage/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDYXRlZ29yeVBhZ2VcQ3JlYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/CategoryPage/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDYXRlZ29yeVBhZ2VcRGVsZXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/CategoryPage/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDYXRlZ29yeVBhZ2VcRWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/CategoryPage/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDYXRlZ29yeVBhZ2VcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb3VudGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -42,8 +58,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOZXdzQXJ0aWNsZVBhZ2VcQ3JlYXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/NewsArticlePage/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOZXdzQXJ0aWNsZVBhZ2VcRGVsZXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/NewsArticlePage/Details.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOZXdzQXJ0aWNsZVBhZ2VcRGV0YWlscy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/NewsArticlePage/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOZXdzQXJ0aWNsZVBhZ2VcRWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/NewsArticlePage/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOZXdzQXJ0aWNsZVBhZ2VcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/NewsReportStatistics.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOZXdzUmVwb3J0U3RhdGlzdGljcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/Profile.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQcm9maWxlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/Weather.razor]

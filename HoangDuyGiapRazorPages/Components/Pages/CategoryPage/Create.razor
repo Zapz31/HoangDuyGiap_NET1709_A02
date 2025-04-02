@@ -1,0 +1,105 @@
+@page "/CategoryPage/Create"
+@using FUNewsManagement_BOs
+@using FUNewsManagement_Repos
+@inject ICategoryRepo CategoryRepo
+@inject NavigationManager NavigationManager
+@inject Blazored.LocalStorage.ILocalStorageService LocalStorage
+
+<div class="container mt-4">
+    <h1>Create Category</h1>
+
+    @if (!string.IsNullOrEmpty(message))
+    {
+        <div class="alert alert-info">@message</div>
+    }
+
+    <div class="card">
+        <div class="card-body">
+            <EditForm Model="category" OnValidSubmit="HandleValidSubmit">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <div class="form-group mb-3">
+                    <label>Category Name</label>
+                    <InputText @bind-Value="category.CategoryName" class="form-control" />
+                </div>
+
+                <div class="form-group mb-3">
+                    <label>Description</label>
+                    <InputText @bind-Value="category.CategoryDesciption" class="form-control" />
+                </div>
+
+                <div class="form-group mb-3">
+                    <label>Parent Category</label>
+                    <InputSelect @bind-Value="category.ParentCategoryId" class="form-control">
+                        <option value="">-- Select Parent Category --</option>
+                        @if (parentCategories != null)
+                        {
+                            @foreach (var parent in parentCategories)
+                            {
+                                <option value="@parent.CategoryId">@parent.CategoryName</option>
+                            }
+                        }
+                    </InputSelect>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label>Status</label>
+                    <InputSelect @bind-Value="category.IsActive" class="form-control">
+                        <option value="true">Active</option>
+                        <option value="false">Inactive</option>
+                    </InputSelect>
+                </div>
+
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-primary me-2">Create</button>
+                    <button type="button" class="btn btn-secondary" @onclick="@(() => NavigationManager.NavigateTo("/CategoryPage/Index"))">
+                        Back to List
+                    </button>
+                </div>
+            </EditForm>
+        </div>
+    </div>
+</div>
+
+@code {
+    private Category category = new();
+    private List<Category>? parentCategories;
+    private string message = string.Empty;
+    private int roleId;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            // Verify admin access
+            var storedRoleId = await LocalStorage.GetItemAsync<string>("RoleId");
+            if (!int.TryParse(storedRoleId, out roleId) || roleId != 1)
+            {
+                NavigationManager.NavigateTo("/NewsArticlePage/Index");
+                return;
+            }
+
+            // Load parent categories
+            parentCategories = await CategoryRepo.GetList();
+        }
+        catch (Exception ex)
+        {
+            message = $"Error loading categories: {ex.Message}";
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        try
+        {
+            await CategoryRepo.AddCategory(category);
+            message = "Create Successful";
+            NavigationManager.NavigateTo("/CategoryPage/Index");
+        }
+        catch (Exception ex)
+        {
+            message = $"Error creating category: {ex.Message}";
+        }
+    }
+} 

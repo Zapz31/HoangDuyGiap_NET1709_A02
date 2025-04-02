@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LCSWU8pYJ13g/ILf3n2gj09+jXq+UgbKjZpo9QTU5wI=",
+  "Hash": "mO1NwCfCzbFXVHuMmPHEDV8Jhj/EP5v19aLCR6P2g9o=",
   "Source": "HoangDuyGiapRazorPages",
   "BasePath": "_content/HoangDuyGiapRazorPages",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\wwwroot\\js\\site.js",
+      "SourceId": "HoangDuyGiapRazorPages",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\wwwroot\\",
+      "BasePath": "_content/HoangDuyGiapRazorPages",
+      "RelativePath": "js/site.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
     }
   ]
 }

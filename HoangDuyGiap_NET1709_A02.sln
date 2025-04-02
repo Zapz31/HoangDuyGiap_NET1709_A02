@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoangDuyGiapRazorPages", "HoangDuyGiapRazorPages\HoangDuyGiapRazorPages.csproj", "{3668277F-310A-430C-8753-71B18A09B104}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HoangDuyGiapRazorPages", "HoangDuyGiapRazorPages\HoangDuyGiapRazorPages.csproj", "{3668277F-310A-430C-8753-71B18A09B104}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FUNewsManagement_BOs", "FUNewsManagement_BOs\FUNewsManagement_BOs.csproj", "{4A4F94DA-12B0-431A-995D-5DB8A4898CED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FUNewsManagement_BOs", "FUNewsManagement_BOs\FUNewsManagement_BOs.csproj", "{4A4F94DA-12B0-431A-995D-5DB8A4898CED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FUNewsManagement_DAOs", "FUNewsManagement_DAOs\FUNewsManagement_DAOs.csproj", "{543DA599-00AC-47C3-B73D-D7959D4B5936}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FUNewsManagement_DAOs", "FUNewsManagement_DAOs\FUNewsManagement_DAOs.csproj", "{543DA599-00AC-47C3-B73D-D7959D4B5936}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FUNewsManagement_Repos", "FUNewsManagement_Repos\FUNewsManagement_Repos.csproj", "{A85208A2-1029-4606-BBD7-E692A94AC6AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FUNewsManagement_Repos", "FUNewsManagement_Repos\FUNewsManagement_Repos.csproj", "{A85208A2-1029-4606-BBD7-E692A94AC6AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

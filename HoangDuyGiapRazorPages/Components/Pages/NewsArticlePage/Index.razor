@@ -127,9 +127,10 @@
     protected override async Task OnInitializedAsync()
     {
         // Get session values
-             accountName = await LocalStorage.GetItemAsync<string>("AccountName");
-             email = await LocalStorage.GetItemAsync<string>("Email");
-             roleId = await LocalStorage.GetItemAsync<int>("RoleId");
+        accountName = await LocalStorage.GetItemAsync<string>("AccountName");
+        email = await LocalStorage.GetItemAsync<string>("Email");
+        roleId = await LocalStorage.GetItemAsync<int>("RoleId");
+        userId = await LocalStorage.GetItemAsync<int>("id");
 
         // Load initial data
         await LoadArticles();

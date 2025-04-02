@@ -1,0 +1,144 @@
+@page "/CategoryPage/Index"
+@using FUNewsManagement_BOs
+@using FUNewsManagement_Repos
+@inject ICategoryRepo CategoryRepo
+@inject NavigationManager NavigationManager
+@inject Blazored.LocalStorage.ILocalStorageService LocalStorage
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Category Management</h1>
+        <div>
+            <button class="btn btn-secondary" @onclick="@(() => NavigationManager.NavigateTo("/NewsArticlePage/Index"))">
+                Back to News Articles
+            </button>
+        </div>
+    </div>
+
+    @if (!string.IsNullOrEmpty(message))
+    {
+        <div class="alert alert-info">@message</div>
+    }
+
+    <div class="card">
+        <div class="card-body">
+            <div class="mb-3 d-flex justify-content-between align-items-center">
+                <div>
+                    <input type="text" @bind="searchTerm" @bind:event="oninput" 
+                           class="form-control d-inline-block w-auto" placeholder="Search categories..." />
+                    <button class="btn btn-primary ms-2" @onclick="SearchCategories">Search</button>
+                </div>
+                <a href="/CategoryPage/Create" class="btn btn-success">Create New</a>
+            </div>
+
+            @if (categories == null)
+            {
+                <div class="text-center">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Parent Category</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var category in categories)
+                            {
+                                <tr>
+                                    <td>@category.CategoryName</td>
+                                    <td>@category.CategoryDesciption</td>
+                                    <td>@(category.ParentCategory?.CategoryName ?? "-")</td>
+                                    <td>
+                                        <span class="badge @(category.IsActive == true ? "bg-success" : "bg-secondary")">
+                                            @(category.IsActive == true ? "Active" : "Inactive")
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <a href="/CategoryPage/Edit/@category.CategoryId" class="btn btn-primary btn-sm">Edit</a>
+                                        <a href="/CategoryPage/Delete/@category.CategoryId" class="btn btn-danger btn-sm ms-1">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                @if (totalPages > 1)
+                {
+                    <nav>
+                        <ul class="pagination justify-content-center">
+                            @for (var i = 1; i <= totalPages; i++)
+                            {
+                                var pageNumber = i;
+                                <li class="page-item @(pageNumber == currentPage ? "active" : "")">
+                                    <button class="page-link" @onclick="() => LoadPage(pageNumber)">@i</button>
+                                </li>
+                            }
+                        </ul>
+                    </nav>
+                }
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    private List<Category>? categories;
+    private string searchTerm = "";
+    private string message = "";
+    private int currentPage = 1;
+    private int totalPages = 1;
+    private const int PageSize = 10;
+    private int roleId;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            // Verify admin access
+            var storedRoleId = await LocalStorage.GetItemAsync<string>("RoleId");
+            if (!int.TryParse(storedRoleId, out roleId) || roleId != 1)
+            {
+                NavigationManager.NavigateTo("/NewsArticlePage/Index");
+                return;
+            }
+
+            await LoadCategories();
+        }
+        catch (Exception ex)
+        {
+            message = $"Error loading categories: {ex.Message}";
+        }
+    }
+
+    private async Task LoadCategories()
+    {
+        var response = await CategoryRepo.GetListWithPagination(searchTerm, currentPage, PageSize);
+        categories = response.Categories;
+        totalPages = response.TotalPages;
+        currentPage = response.PageIndex;
+    }
+
+    private async Task SearchCategories()
+    {
+        currentPage = 1;
+        await LoadCategories();
+    }
+
+    private async Task LoadPage(int page)
+    {
+        currentPage = page;
+        await LoadCategories();
+    }
+} 

@@ -3,55 +3,63 @@
   "WorkspaceRootPath": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|d:\\fptu\\semester vii\\prn222\\assignment\\2_prn222_assignments\\assignments\\assignment02\\hoangduygiap_net1709_a02\\hoangduygiaprazorpages\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|solutionrelative:hoangduygiaprazorpages\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|d:\\fptu\\semester vii\\prn222\\assignment\\2_prn222_assignments\\assignments\\assignment02\\hoangduygiap_net1709_a02\\hoangduygiaprazorpages\\components\\pages\\categorypage\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|solutionrelative:hoangduygiaprazorpages\\components\\pages\\categorypage\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|d:\\fptu\\semester vii\\prn222\\assignment\\2_prn222_assignments\\assignments\\assignment02\\hoangduygiap_net1709_a02\\hoangduygiaprazorpages\\components\\pages\\newsarticlepage\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|solutionrelative:hoangduygiaprazorpages\\components\\pages\\newsarticlepage\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|d:\\fptu\\semester vii\\prn222\\assignment\\2_prn222_assignments\\assignments\\assignment02\\hoangduygiap_net1709_a02\\hoangduygiaprazorpages\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|solutionrelative:hoangduygiaprazorpages\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|d:\\fptu\\semester vii\\prn222\\assignment\\2_prn222_assignments\\assignments\\assignment02\\hoangduygiap_net1709_a02\\hoangduygiaprazorpages\\components\\pages\\newsarticlepage\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|solutionrelative:hoangduygiaprazorpages\\components\\pages\\newsarticlepage\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|d:\\fptu\\semester vii\\prn222\\assignment\\2_prn222_assignments\\assignments\\assignment02\\hoangduygiap_net1709_a02\\hoangduygiaprazorpages\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\hoangduygiaprazorpages\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|solutionrelative:hoangduygiaprazorpages\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|d:\\fptu\\semester vii\\prn222\\assignment\\2_prn222_assignments\\assignments\\assignment02\\hoangduygiap_net1709_a02\\hoangduygiaprazorpages\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\hoangduygiaprazorpages\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|solutionrelative:hoangduygiaprazorpages\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\hoangduygiaprazorpages\\components\\pages\\categorypage\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|solutionrelative:hoangduygiaprazorpages\\components\\pages\\categorypage\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\hoangduygiaprazorpages\\components\\pages\\newsarticlepage\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|solutionrelative:hoangduygiaprazorpages\\components\\pages\\newsarticlepage\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\hoangduygiaprazorpages\\components\\pages\\newsarticlepage\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|solutionrelative:hoangduygiaprazorpages\\components\\pages\\newsarticlepage\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\hoangduygiaprazorpages\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|solutionrelative:hoangduygiaprazorpages\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\hoangduygiaprazorpages\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|solutionrelative:hoangduygiaprazorpages\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|d:\\fptu\\semester vii\\prn222\\assignment\\2_prn222_assignments\\assignments\\assignment02\\hoangduygiap_net1709_a02\\hoangduygiaprazorpages\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\hoangduygiaprazorpages\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|solutionrelative:hoangduygiaprazorpages\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|d:\\fptu\\semester vii\\prn222\\assignment\\2_prn222_assignments\\assignments\\assignment02\\hoangduygiap_net1709_a02\\hoangduygiaprazorpages\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\hoangduygiaprazorpages\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|solutionrelative:hoangduygiaprazorpages\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|d:\\fptu\\semester vii\\prn222\\assignment\\2_prn222_assignments\\assignments\\assignment02\\hoangduygiap_net1709_a02\\hoangduygiaprazorpages\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\hoangduygiaprazorpages\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{3668277F-310A-430C-8753-71B18A09B104}|HoangDuyGiapRazorPages\\HoangDuyGiapRazorPages.csproj|solutionrelative:hoangduygiaprazorpages\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{543DA599-00AC-47C3-B73D-D7959D4B5936}|FUNewsManagement_DAOs\\FUNewsManagement_DAOs.csproj|d:\\fptu\\semester vii\\prn222\\assignment\\2_prn222_assignments\\assignments\\assignment02\\hoangduygiap_net1709_a02\\funewsmanagement_daos\\funewsmanagementcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{543DA599-00AC-47C3-B73D-D7959D4B5936}|FUNewsManagement_DAOs\\FUNewsManagement_DAOs.csproj|D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\funewsmanagement_daos\\funewsmanagementcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{543DA599-00AC-47C3-B73D-D7959D4B5936}|FUNewsManagement_DAOs\\FUNewsManagement_DAOs.csproj|solutionrelative:funewsmanagement_daos\\funewsmanagementcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A85208A2-1029-4606-BBD7-E692A94AC6AB}|FUNewsManagement_Repos\\FUNewsManagement_Repos.csproj|d:\\fptu\\semester vii\\prn222\\assignment\\2_prn222_assignments\\assignments\\assignment02\\hoangduygiap_net1709_a02\\funewsmanagement_repos\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A85208A2-1029-4606-BBD7-E692A94AC6AB}|FUNewsManagement_Repos\\FUNewsManagement_Repos.csproj|D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\funewsmanagement_repos\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A85208A2-1029-4606-BBD7-E692A94AC6AB}|FUNewsManagement_Repos\\FUNewsManagement_Repos.csproj|solutionrelative:funewsmanagement_repos\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{543DA599-00AC-47C3-B73D-D7959D4B5936}|FUNewsManagement_DAOs\\FUNewsManagement_DAOs.csproj|d:\\fptu\\semester vii\\prn222\\assignment\\2_prn222_assignments\\assignments\\assignment02\\hoangduygiap_net1709_a02\\funewsmanagement_daos\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{543DA599-00AC-47C3-B73D-D7959D4B5936}|FUNewsManagement_DAOs\\FUNewsManagement_DAOs.csproj|D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\funewsmanagement_daos\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{543DA599-00AC-47C3-B73D-D7959D4B5936}|FUNewsManagement_DAOs\\FUNewsManagement_DAOs.csproj|solutionrelative:funewsmanagement_daos\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A4F94DA-12B0-431A-995D-5DB8A4898CED}|FUNewsManagement_BOs\\FUNewsManagement_BOs.csproj|d:\\fptu\\semester vii\\prn222\\assignment\\2_prn222_assignments\\assignments\\assignment02\\hoangduygiap_net1709_a02\\funewsmanagement_bos\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4A4F94DA-12B0-431A-995D-5DB8A4898CED}|FUNewsManagement_BOs\\FUNewsManagement_BOs.csproj|D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\funewsmanagement_bos\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A4F94DA-12B0-431A-995D-5DB8A4898CED}|FUNewsManagement_BOs\\FUNewsManagement_BOs.csproj|solutionrelative:funewsmanagement_bos\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -71,32 +79,55 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Delete.razor",
+              "DocumentMoniker": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\Components\\Pages\\CategoryPage\\Delete.razor",
+              "RelativeDocumentMoniker": "HoangDuyGiapRazorPages\\Components\\Pages\\CategoryPage\\Delete.razor",
+              "ToolTip": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\Components\\Pages\\CategoryPage\\Delete.razor",
+              "RelativeToolTip": "HoangDuyGiapRazorPages\\Components\\Pages\\CategoryPage\\Delete.razor",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAEYAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-02T14:41:03.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Edit.razor",
+              "DocumentMoniker": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\Components\\Pages\\CategoryPage\\Edit.razor",
+              "RelativeDocumentMoniker": "HoangDuyGiapRazorPages\\Components\\Pages\\CategoryPage\\Edit.razor",
+              "ToolTip": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\Components\\Pages\\CategoryPage\\Edit.razor",
+              "RelativeToolTip": "HoangDuyGiapRazorPages\\Components\\Pages\\CategoryPage\\Edit.razor",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAewFwAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-02T14:30:21.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "site.js",
               "DocumentMoniker": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "HoangDuyGiapRazorPages\\wwwroot\\js\\site.js",
               "ToolTip": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\wwwroot\\js\\site.js",
               "RelativeToolTip": "HoangDuyGiapRazorPages\\wwwroot\\js\\site.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-04-02T10:44:16.165Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T10:44:16.165Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Create.razor",
               "DocumentMoniker": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\Components\\Pages\\NewsArticlePage\\Create.razor",
               "RelativeDocumentMoniker": "HoangDuyGiapRazorPages\\Components\\Pages\\NewsArticlePage\\Create.razor",
               "ToolTip": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\Components\\Pages\\NewsArticlePage\\Create.razor",
               "RelativeToolTip": "HoangDuyGiapRazorPages\\Components\\Pages\\NewsArticlePage\\Create.razor",
-              "ViewState": "AQIAAHUAAAAAAAAAAAAAAIkAAAAaAAAA",
+              "ViewState": "AQIAAIEAAAAAAAAAAAAAAIkAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T09:11:13.408Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T09:11:13.408Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Counter.razor",
               "DocumentMoniker": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\Components\\Pages\\Counter.razor",
               "RelativeDocumentMoniker": "HoangDuyGiapRazorPages\\Components\\Pages\\Counter.razor",
@@ -104,12 +135,11 @@
               "RelativeToolTip": "HoangDuyGiapRazorPages\\Components\\Pages\\Counter.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T08:26:30.957Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T08:26:30.957Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "HoangDuyGiapRazorPages\\Properties\\launchSettings.json",
@@ -117,21 +147,19 @@
               "RelativeToolTip": "HoangDuyGiapRazorPages\\Properties\\launchSettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-02T06:16:45.495Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T06:16:45.495Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Index.razor",
               "DocumentMoniker": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\Components\\Pages\\NewsArticlePage\\Index.razor",
               "RelativeDocumentMoniker": "HoangDuyGiapRazorPages\\Components\\Pages\\NewsArticlePage\\Index.razor",
               "ToolTip": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\Components\\Pages\\NewsArticlePage\\Index.razor",
               "RelativeToolTip": "HoangDuyGiapRazorPages\\Components\\Pages\\NewsArticlePage\\Index.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAOAAAA",
+              "ViewState": "AQIAAHQAAAAAAAAAAAAuwIUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T06:09:36.563Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T06:09:36.563Z"
             },
             {
               "$type": "Document",
@@ -141,27 +169,25 @@
               "RelativeDocumentMoniker": "HoangDuyGiapRazorPages\\Program.cs",
               "ToolTip": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\Program.cs",
               "RelativeToolTip": "HoangDuyGiapRazorPages\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T04:26:42.55Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T04:26:42.55Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Login.razor",
               "DocumentMoniker": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\Components\\Pages\\Login.razor",
               "RelativeDocumentMoniker": "HoangDuyGiapRazorPages\\Components\\Pages\\Login.razor",
               "ToolTip": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\Components\\Pages\\Login.razor",
               "RelativeToolTip": "HoangDuyGiapRazorPages\\Components\\Pages\\Login.razor",
-              "ViewState": "AQIAADwAAAAAAAAAAAAqwFkAAAAAAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAEYAAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T04:21:03.567Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T04:21:03.567Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "App.razor",
               "DocumentMoniker": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\Components\\App.razor",
               "RelativeDocumentMoniker": "HoangDuyGiapRazorPages\\Components\\App.razor",
@@ -169,12 +195,11 @@
               "RelativeToolTip": "HoangDuyGiapRazorPages\\Components\\App.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T03:33:30.104Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T03:33:30.104Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "FunewsManagementContext.cs",
               "DocumentMoniker": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\FUNewsManagement_DAOs\\FunewsManagementContext.cs",
               "RelativeDocumentMoniker": "FUNewsManagement_DAOs\\FunewsManagementContext.cs",
@@ -182,12 +207,11 @@
               "RelativeToolTip": "FUNewsManagement_DAOs\\FunewsManagementContext.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAgwBMAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T03:12:37.176Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T03:12:37.176Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Class1.cs",
               "DocumentMoniker": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\FUNewsManagement_Repos\\Class1.cs",
               "RelativeDocumentMoniker": "FUNewsManagement_Repos\\Class1.cs",
@@ -195,12 +219,11 @@
               "RelativeToolTip": "FUNewsManagement_Repos\\Class1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T03:10:18.951Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T03:10:18.951Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Class1.cs",
               "DocumentMoniker": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\FUNewsManagement_DAOs\\Class1.cs",
               "RelativeDocumentMoniker": "FUNewsManagement_DAOs\\Class1.cs",
@@ -208,12 +231,11 @@
               "RelativeToolTip": "FUNewsManagement_DAOs\\Class1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T03:09:50.23Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T03:09:50.23Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\appsettings.json",
               "RelativeDocumentMoniker": "HoangDuyGiapRazorPages\\appsettings.json",
@@ -221,12 +243,11 @@
               "RelativeToolTip": "HoangDuyGiapRazorPages\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-02T03:07:13.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T03:07:13.829Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Class1.cs",
               "DocumentMoniker": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\FUNewsManagement_BOs\\Class1.cs",
               "RelativeDocumentMoniker": "FUNewsManagement_BOs\\Class1.cs",
@@ -234,8 +255,7 @@
               "RelativeToolTip": "FUNewsManagement_BOs\\Class1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T03:03:01.817Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T03:03:01.817Z"
             }
           ]
         }

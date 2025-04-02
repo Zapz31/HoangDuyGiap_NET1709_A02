@@ -1,0 +1,148 @@
+@page "/NewsReportStatistics"
+@using FUNewsManagement_BOs
+@using FUNewsManagement_Repos
+@using FUNewsManagement_DAOs
+@inject INewsArticleRepo ArticlesRepo
+@inject NavigationManager NavigationManager
+@inject Blazored.LocalStorage.ILocalStorageService LocalStorage
+
+<PageTitle>News Report Statistics</PageTitle>
+
+<div class="container-fluid px-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="mt-4">News Report Statistics</h1>
+        <div>
+            <button @onclick="Logout" class="btn btn-outline-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-filter me-1"></i>
+            Filter Report Parameters
+        </div>
+        <div class="card-body">
+            <EditForm Model="this" OnValidSubmit="GenerateReport" class="row g-3">
+                <div class="col-md-5">
+                    <label class="form-label">Start Date</label>
+                    <InputDate @bind-Value="StartDate" class="form-control" />
+                </div>
+                <div class="col-md-5">
+                    <label class="form-label">End Date</label>
+                    <InputDate @bind-Value="EndDate" class="form-control" />
+                </div>
+                <div class="col-md-2 align-self-end">
+                    <button type="submit" class="btn btn-primary w-100">
+                        <i class="fas fa-chart-bar me-1"></i>Generate Report
+                    </button>
+                </div>
+            </EditForm>
+        </div>
+    </div>
+
+    @if (ReportStatistics != null && ReportStatistics.Any())
+    {
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fas fa-table me-1"></i>
+                Report Statistics Details
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover" id="reportStatisticsTable">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Category</th>
+                                <th>Total Articles</th>
+                                <th>Earliest Article Date</th>
+                                <th>Latest Article Date</th>
+                                <th>Top Tags</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var stat in ReportStatistics)
+                            {
+                                <tr>
+                                    <td>@stat.CategoryName</td>
+                                    <td class="text-end">@stat.TotalArticles</td>
+                                    <td>@(stat.EarliestArticleDate?.ToString("yyyy-MM-dd"))</td>
+                                    <td>@(stat.LatestArticleDate?.ToString("yyyy-MM-dd"))</td>
+                                    <td>@string.Join(", ", stat.TopTags ?? new List<string>())</td>
+                                </tr>
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5" class="text-muted small">
+                                    Total Categories: @ReportStatistics.Count
+                                    | Total Articles: @ReportStatistics.Sum(r => r.TotalArticles)
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    }
+    else if (isLoaded)
+    {
+        <div class="alert alert-info" role="alert">
+            <i class="fas fa-info-circle me-2"></i>
+            No statistics found for the selected date range. Please adjust your search criteria.
+        </div>
+    }
+</div>
+
+@code {
+    private DateTime StartDate { get; set; }
+    private DateTime EndDate { get; set; }
+    private List<NewsArticleDAO.NewsReportStatistic> ReportStatistics { get; set; }
+    private bool isLoaded = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Check admin access
+        var roleId = await LocalStorage.GetItemAsync<string>("RoleId");
+        if (roleId != "3")
+        {
+            NavigationManager.NavigateTo("/NewsArticlePage/Index");
+            return;
+        }
+
+        // Set default date range to last 30 days
+        EndDate = DateTime.Now;
+        StartDate = EndDate.AddDays(-30);
+
+        await LoadReportStatistics();
+    }
+
+    private async Task GenerateReport()
+    {
+        await LoadReportStatistics();
+    }
+
+    private async Task LoadReportStatistics()
+    {
+        try
+        {
+            ReportStatistics = await ArticlesRepo.GetReportStatisticsAsync(StartDate, EndDate);
+            isLoaded = true;
+        }
+        catch (Exception)
+        {
+            ReportStatistics = new List<NewsArticleDAO.NewsReportStatistic>();
+            isLoaded = true;
+        }
+    }
+
+    private async Task Logout()
+    {
+        await LocalStorage.RemoveItemAsync("AccountName");
+        await LocalStorage.RemoveItemAsync("id");
+        await LocalStorage.RemoveItemAsync("Email");
+        await LocalStorage.RemoveItemAsync("RoleId");
+        NavigationManager.NavigateTo("/Login", true);
+    }
+} 

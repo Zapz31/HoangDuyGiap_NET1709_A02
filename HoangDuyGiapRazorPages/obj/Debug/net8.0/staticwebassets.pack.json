@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
+      "Id": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HoangDuyGiapRazorPages.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

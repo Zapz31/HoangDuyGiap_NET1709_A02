@@ -1,0 +1,129 @@
+@page "/CategoryPage/Edit/{Id}"
+@using FUNewsManagement_BOs
+@using FUNewsManagement_Repos
+@inject ICategoryRepo CategoryRepo
+@inject NavigationManager NavigationManager
+@inject Blazored.LocalStorage.ILocalStorageService LocalStorage
+
+<div class="container mt-4">
+    <h1>Edit Category</h1>
+
+    @if (!string.IsNullOrEmpty(message))
+    {
+        <div class="alert alert-info">@message</div>
+    }
+
+    @if (category == null)
+    {
+        <div class="text-center">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="card">
+            <div class="card-body">
+                <EditForm Model="category" OnValidSubmit="HandleValidSubmit">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+
+                    <div class="form-group mb-3">
+                        <label>Category Name</label>
+                        <InputText @bind-Value="category.CategoryName" class="form-control" />
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label>Description</label>
+                        <InputText @bind-Value="category.CategoryDesciption" class="form-control" />
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label>Parent Category</label>
+                        <InputSelect @bind-Value="category.ParentCategoryId" class="form-control">
+                            <option value="">-- Select Parent Category --</option>
+                            @if (parentCategories != null)
+                            {
+                                @foreach (var parent in parentCategories)
+                                {
+                                    <option value="@parent.CategoryId">@parent.CategoryName</option>
+                                }
+                            }
+                        </InputSelect>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label>Status</label>
+                        <InputSelect @bind-Value="category.IsActive" class="form-control">
+                            <option value="true">Active</option>
+                            <option value="false">Inactive</option>
+                        </InputSelect>
+                    </div>
+
+                    <div class="mt-4">
+                        <button type="submit" class="btn btn-primary me-2">Save</button>
+                        <button type="button" class="btn btn-secondary" @onclick="@(() => NavigationManager.NavigateTo("/CategoryPage/Index"))">
+                            Back to List
+                        </button>
+                    </div>
+                </EditForm>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public string Id { get; set; } = default!;
+
+    private Category? category;
+    private List<Category>? parentCategories;
+    private string message = string.Empty;
+    private int roleId;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            // Verify admin access
+            var storedRoleId = await LocalStorage.GetItemAsync<string>("RoleId");
+            if (!int.TryParse(storedRoleId, out roleId) || roleId != 1)
+            {
+                NavigationManager.NavigateTo("/NewsArticlePage/Index");
+                return;
+            }
+
+            // Load the category
+            category = await CategoryRepo.getCategoryById(short.Parse(Id));
+            if (category == null)
+            {
+                message = "Category not found";
+                return;
+            }
+
+            // Load parent categories (excluding the current category to prevent self-reference)
+            parentCategories = (await CategoryRepo.GetList())
+                .Where(c => c.CategoryId != category.CategoryId)
+                .ToList();
+        }
+        catch (Exception ex)
+        {
+            message = $"Error loading category: {ex.Message}";
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        try
+        {
+            await CategoryRepo.UpdateCategory(category!);
+            message = "Update Successful";
+            NavigationManager.NavigateTo("/CategoryPage/Index");
+        }
+        catch (Exception ex)
+        {
+            message = $"Error updating category: {ex.Message}";
+        }
+    }
+} 

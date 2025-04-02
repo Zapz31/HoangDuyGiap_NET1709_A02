@@ -1,0 +1,110 @@
+@page "/NewsArticlePage/Details/{Id}"
+@using FUNewsManagement_BOs
+@using FUNewsManagement_Repos
+@inject INewsArticleRepo NewsArticleRepo
+@inject NavigationManager NavigationManager
+
+<div class="container mt-4">
+    <h1>Details</h1>
+
+    @if (newsArticle == null)
+    {
+        <div class="text-center">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="card">
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-3">Title</dt>
+                    <dd class="col-sm-9">@newsArticle.NewsTitle</dd>
+
+                    <dt class="col-sm-3">Headline</dt>
+                    <dd class="col-sm-9">@newsArticle.Headline</dd>
+
+                    <dt class="col-sm-3">Content</dt>
+                    <dd class="col-sm-9">@newsArticle.NewsContent</dd>
+
+                    <dt class="col-sm-3">Source</dt>
+                    <dd class="col-sm-9">@newsArticle.NewsSource</dd>
+
+                    <dt class="col-sm-3">Category</dt>
+                    <dd class="col-sm-9">@newsArticle.Category?.CategoryName</dd>
+
+                    <dt class="col-sm-3">Status</dt>
+                    <dd class="col-sm-9">
+                        <span class="badge @(newsArticle.NewsStatus == true ? "bg-success" : "bg-secondary")">
+                            @(newsArticle.NewsStatus == true ? "Active" : "Inactive")
+                        </span>
+                    </dd>
+
+                    <dt class="col-sm-3">Created Date</dt>
+                    <dd class="col-sm-9">@newsArticle.CreatedDate?.ToString("MMM dd, yyyy HH:mm")</dd>
+
+                    <dt class="col-sm-3">Created By</dt>
+                    <dd class="col-sm-9">@newsArticle.CreatedBy?.AccountName</dd>
+
+                    @if (newsArticle.ModifiedDate.HasValue)
+                    {
+                        <dt class="col-sm-3">Modified Date</dt>
+                        <dd class="col-sm-9">@newsArticle.ModifiedDate?.ToString("MMM dd, yyyy HH:mm")</dd>
+                    }
+
+                    <dt class="col-sm-3">Tags</dt>
+                    <dd class="col-sm-9">
+                        @if (newsArticle.Tags != null && newsArticle.Tags.Any())
+                        {
+                            <div class="d-flex flex-wrap gap-2">
+                                @foreach (var tag in newsArticle.Tags)
+                                {
+                                    <span class="badge bg-info text-dark">@tag.TagName</span>
+                                }
+                            </div>
+                        }
+                        else
+                        {
+                            <span class="text-muted">No tags</span>
+                        }
+                    </dd>
+                </dl>
+
+                <div class="mt-4">
+                    <a href="/NewsArticlePage/Edit/@newsArticle.NewsArticleId" class="btn btn-primary me-2">Edit</a>
+                    <button class="btn btn-secondary" @onclick="@(() => NavigationManager.NavigateTo("/NewsArticlePage/Index"))">Back to List</button>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public string Id { get; set; } = default!;
+
+    private NewsArticle? newsArticle;
+    private string errorMessage = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            if (!string.IsNullOrEmpty(Id))
+            {
+                newsArticle = await NewsArticleRepo.GetNewsArticleById(Id);
+                if (newsArticle == null)
+                {
+                    errorMessage = "Article not found";
+                    NavigationManager.NavigateTo("/NewsArticlePage/Index");
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error loading article: {ex.Message}";
+        }
+    }
+} 

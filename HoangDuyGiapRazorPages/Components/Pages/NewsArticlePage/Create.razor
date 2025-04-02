@@ -63,13 +63,10 @@
 
     <div class="form-group">
         <label>Select Tags</label>
-        @* Vì Blazor không hỗ trợ binding trực tiếp cho multiple select, nên chúng ta sử dụng sự kiện onchange *@
         <select class="form-control" multiple @onchange="OnTagSelectionChanged">
             @foreach(var tag in tagList)
             {
-                <option value="@tag.TagId" selected="@selectedTagIds.Contains(tag.TagId)">
-                    @tag.TagName
-                </option>
+                <option value="@tag.TagId">@tag.TagName</option>
             }
         </select>
     </div>
@@ -113,23 +110,10 @@
 
     private async Task OnTagSelectionChanged(ChangeEventArgs e)
     {
-        // Lấy danh sách giá trị được chọn từ element select
-        // Do Blazor không bind được list nên ta tự xử lý
-        if (e.Value is not null)
+        selectedTagIds.Clear();
+        if (e.Value is IEnumerable<string> selectedValues)
         {
-            // e.Value trả về dạng string chứa các giá trị được chọn cách nhau dấu phẩy
-            var valueString = e.Value.ToString();
-            if (!string.IsNullOrEmpty(valueString))
-            {
-                selectedTagIds = valueString.Split(',')
-                                            .Select(s => int.TryParse(s, out var id) ? id : 0)
-                                            .Where(id => id != 0)
-                                            .ToList();
-            }
-            else
-            {
-                selectedTagIds.Clear();
-            }
+            selectedTagIds.AddRange(selectedValues.Select(v => int.Parse(v)));
         }
     }
 

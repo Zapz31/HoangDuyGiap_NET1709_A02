@@ -74,3 +74,4 @@ D:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignme
 D:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\HoangDuyGiapRazorPages\obj\Debug\net8.0\HoangDuyGiapRazorPages.genruntimeconfig.cache
 D:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\HoangDuyGiapRazorPages\obj\Debug\net8.0\ref\HoangDuyGiapRazorPages.dll
 D:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\HoangDuyGiapRazorPages\bin\Debug\net8.0\Blazored.LocalStorage.dll
+D:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\HoangDuyGiapRazorPages\obj\Debug\net8.0\HoangDuyGiapRazorPages.sourcelink.json

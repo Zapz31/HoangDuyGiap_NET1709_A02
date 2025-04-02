@@ -1,0 +1,158 @@
+@page "/NewsArticlePage/Edit/{Id}"
+@using FUNewsManagement_BOs
+@using FUNewsManagement_Repos
+@inject INewsArticleRepo NewsArticleRepo
+@inject ICategoryRepo CategoryRepo
+@inject ISystemAccountRepo SystemAccountRepo
+@inject NavigationManager NavigationManager
+@inject Blazored.LocalStorage.ILocalStorageService LocalStorage
+
+<div class="container mt-4">
+    <h1>Edit News Article</h1>
+
+    @if (!string.IsNullOrEmpty(message))
+    {
+        <div class="alert alert-info">@message</div>
+    }
+
+    @if (newsArticle == null)
+    {
+        <div class="text-center">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="card">
+            <div class="card-body">
+                <EditForm Model="newsArticle" OnValidSubmit="HandleValidSubmit">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+
+                    <div class="form-group mb-3">
+                        <label>Title</label>
+                        <InputText @bind-Value="newsArticle.NewsTitle" class="form-control" />
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label>Headline</label>
+                        <InputText @bind-Value="newsArticle.Headline" class="form-control" />
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label>Content</label>
+                        <InputTextArea @bind-Value="newsArticle.NewsContent" class="form-control" rows="5" />
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label>Source</label>
+                        <InputText @bind-Value="newsArticle.NewsSource" class="form-control" />
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label>Category</label>
+                        <InputSelect @bind-Value="newsArticle.CategoryId" class="form-control">
+                            @if (categories != null)
+                            {
+                                @foreach (var category in categories)
+                                {
+                                    <option value="@category.CategoryId">@category.CategoryName</option>
+                                }
+                            }
+                        </InputSelect>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label>Status</label>
+                        <InputSelect @bind-Value="newsArticle.NewsStatus" class="form-control">
+                            <option value="true">Active</option>
+                            <option value="false">Inactive</option>
+                        </InputSelect>
+                    </div>
+
+                    <div class="mt-4">
+                        <button type="submit" class="btn btn-primary me-2">Save</button>
+                        <button type="button" class="btn btn-secondary" @onclick="@(() => NavigationManager.NavigateTo("/NewsArticlePage/Index"))">
+                            Back to List
+                        </button>
+                    </div>
+                </EditForm>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public string Id { get; set; } = default!;
+
+    private NewsArticle? newsArticle;
+    private List<Category> categories = new();
+    private string message = string.Empty;
+    private int userId;
+    private int roleId;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            // Verify user authentication
+            var storedId = await LocalStorage.GetItemAsync<string>("id");
+            var storedRoleId = await LocalStorage.GetItemAsync<string>("RoleId");
+
+            if (string.IsNullOrEmpty(storedId) || !int.TryParse(storedId, out userId))
+            {
+                NavigationManager.NavigateTo("/login");
+                return;
+            }
+
+            if (!int.TryParse(storedRoleId, out roleId))
+            {
+                NavigationManager.NavigateTo("/login");
+                return;
+            }
+
+            // Load the article
+            newsArticle = await NewsArticleRepo.GetNewsArticleById(Id);
+            if (newsArticle == null)
+            {
+                message = "Article not found";
+                return;
+            }
+
+            // Check permissions
+            if (roleId != 1 && newsArticle.CreatedById != userId)
+            {
+                message = "You don't have permission to edit this article";
+                NavigationManager.NavigateTo("/NewsArticlePage/Index");
+                return;
+            }
+
+            // Load categories
+            categories = await CategoryRepo.GetList();
+        }
+        catch (Exception ex)
+        {
+            message = $"Error loading article: {ex.Message}";
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        try
+        {
+            newsArticle!.ModifiedDate = DateTime.Now;
+            newsArticle.UpdatedById = (short)userId;
+
+            await NewsArticleRepo.UpdateNewsAricle(newsArticle);
+            message = "Update Successful";
+            NavigationManager.NavigateTo("/NewsArticlePage/Index");
+        }
+        catch (Exception ex)
+        {
+            message = $"Error updating article: {ex.Message}";
+        }
+    }
+} 
