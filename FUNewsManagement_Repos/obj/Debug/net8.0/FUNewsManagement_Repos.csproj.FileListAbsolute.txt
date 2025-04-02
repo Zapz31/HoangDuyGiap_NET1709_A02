@@ -1,0 +1,17 @@
+D:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\FUNewsManagement_Repos\bin\Debug\net8.0\FUNewsManagement_Repos.deps.json
+D:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\FUNewsManagement_Repos\bin\Debug\net8.0\FUNewsManagement_Repos.dll
+D:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\FUNewsManagement_Repos\bin\Debug\net8.0\FUNewsManagement_Repos.pdb
+D:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\FUNewsManagement_Repos\bin\Debug\net8.0\FUNewsManagement_BOs.dll
+D:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\FUNewsManagement_Repos\bin\Debug\net8.0\FUNewsManagement_DAOs.dll
+D:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\FUNewsManagement_Repos\bin\Debug\net8.0\FUNewsManagement_DAOs.pdb
+D:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\FUNewsManagement_Repos\bin\Debug\net8.0\FUNewsManagement_BOs.pdb
+D:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\FUNewsManagement_Repos\obj\Debug\net8.0\FUNewsManagement_Repos.csproj.AssemblyReference.cache
+D:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\FUNewsManagement_Repos\obj\Debug\net8.0\FUNewsManagement_Repos.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\FUNewsManagement_Repos\obj\Debug\net8.0\FUNewsManagement_Repos.AssemblyInfoInputs.cache
+D:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\FUNewsManagement_Repos\obj\Debug\net8.0\FUNewsManagement_Repos.AssemblyInfo.cs
+D:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\FUNewsManagement_Repos\obj\Debug\net8.0\FUNewsManagement_Repos.csproj.CoreCompileInputs.cache
+D:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\FUNewsManagement_Repos\obj\Debug\net8.0\FUNewsMa.1412F8A0.Up2Date
+D:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\FUNewsManagement_Repos\obj\Debug\net8.0\FUNewsManagement_Repos.dll
+D:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\FUNewsManagement_Repos\obj\Debug\net8.0\refint\FUNewsManagement_Repos.dll
+D:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\FUNewsManagement_Repos\obj\Debug\net8.0\FUNewsManagement_Repos.pdb
+D:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\FUNewsManagement_Repos\obj\Debug\net8.0\ref\FUNewsManagement_Repos.dll

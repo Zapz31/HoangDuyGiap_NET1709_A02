@@ -1,0 +1,173 @@
+﻿@page "/NewsArticlePage/Index"
+@inject INewsArticleRepo NewsArticleRepo
+@inject NavigationManager NavigationManager
+@inject Blazored.LocalStorage.ILocalStorageService LocalStorage
+@using FUNewsManagement_BOs
+@using FUNewsManagement_Repos
+
+<PageTitle>News Articles</PageTitle>
+
+<div class="d-flex justify-content-between align-items-center">
+    <h1>News Article Management</h1>
+    <div>
+        <span class="me-3">@accountName</span>
+        <a href="/Profile/@userId" class="btn btn-outline-primary btn-sm">Your profile</a>
+        <button @onclick="Logout" class="btn btn-outline-danger btn-sm ms-2">Logout</button>
+    </div>
+</div>
+
+<p>
+    <a href="/NewsArticlePage/Create" class="btn btn-primary">Create New</a>
+</p>
+
+@if (!string.IsNullOrEmpty(message))
+{
+    <h2 class="text-info">@message</h2>
+}
+
+<div class="container-fluid px-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        @if (roleId == 1)
+        {
+            <a href="/CategoryPage/Index" class="btn btn-secondary">
+                <i class="fas fa-tags"></i> Category Management
+            </a>
+        }
+    </div>
+    <div class="mb-3">
+        <input type="text" @bind="searchTerm" class="form-control d-inline-block w-auto" placeholder="Search..." />
+        <button @onclick="SearchArticles" class="btn btn-primary ms-2">Search</button>
+    </div>
+    <ul class="pagination">
+        @for (var i = 1; i <= totalPages; i++)
+        {
+            var pageNumber = i;
+            <li class="page-item @(i == pageIndex ? "active" : "")">
+                <button class="page-link" @onclick="() => LoadPage(pageNumber)">@i</button>
+            </li>
+        }
+    </ul>
+
+    @if (newsArticles == null)
+    {
+        <p>Loading...</p>
+    }
+    else
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>News Title</th>
+                    <th>Headline</th>
+                    <th>Created Date</th>
+                    <th>News Source</th>
+                    <th>News Status</th>
+                    <th>Modified Date</th>
+                    <th>Category</th>
+                    <th>Created By</th>
+                    <th>Tags</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in newsArticles)
+                {
+                    <tr>
+                        <td>@item.NewsTitle</td>
+                        <td>@item.Headline</td>
+                        <td>@item.CreatedDate</td>
+                        <td>@item.NewsSource</td>
+                        <td>@(item.NewsStatus == true ? "Active" : "Inactive")</td>
+                        <td>@(item.ModifiedDate != null ? item.ModifiedDate.ToString() : "N/A")</td>
+                        <td>@item.Category?.CategoryName</td>
+                        <td>@item.CreatedBy?.AccountName</td>
+                        <td>
+                            @if (item.Tags != null && item.Tags.Any())
+                            {
+                                <div class="d-flex flex-wrap" style="max-width: 200px;">
+                                    @foreach (var tag in item.Tags.Take(3))
+                                    {
+                                        <span class="badge bg-info text-dark me-1 mb-1" style="font-size: 0.8rem;">@tag.TagName</span>
+                                    }
+                                    @if (item.Tags.Count() > 3)
+                                    {
+                                        <span class="badge bg-secondary text-white me-1 mb-1" style="font-size: 0.8rem;">+@(item.Tags.Count() - 3)</span>
+                                    }
+                                </div>
+                            }
+                            else
+                            {
+                                <span class="text-muted">No tags</span>
+                            }
+                        </td>
+                        <td>
+                            <a href="/NewsArticlePage/Edit/@item.NewsArticleId">Edit</a> |
+                            <a href="/NewsArticlePage/Details/@item.NewsArticleId">Details</a> |
+                            <a href="/NewsArticlePage/Delete/@item.NewsArticleId">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
+
+@code {
+    private List<NewsArticle> newsArticles = new();
+    private string searchTerm = "";
+    private int pageIndex = 1;
+    private int totalPages = 1;
+    private int pageSize = 5;
+    private string message = "";
+    private string? accountName = "";
+    private int userId = 0;
+    private int roleId = 0;
+    public string? email = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Get session values
+             accountName = await LocalStorage.GetItemAsync<string>("AccountName");
+             email = await LocalStorage.GetItemAsync<string>("Email");
+             roleId = await LocalStorage.GetItemAsync<int>("RoleId");
+
+        // Load initial data
+        await LoadArticles();
+    }
+
+    private async Task LoadArticles()
+    {
+        try
+        {
+            var result = await NewsArticleRepo.GetList(searchTerm, pageIndex, pageSize, roleId);
+            newsArticles = result.NewsArticles;
+            pageIndex = result.PageIndex;
+            totalPages = result.TotalPages;
+        }
+        catch (Exception ex)
+        {
+            message = $"Error loading articles: {ex.Message}";
+        }
+    }
+
+    private async Task SearchArticles()
+    {
+        pageIndex = 1; // Reset to first page when searching
+        await LoadArticles();
+    }
+
+    private async Task LoadPage(int page)
+    {
+        pageIndex = page;
+        await LoadArticles();
+    }
+
+    private async Task Logout()
+    {
+        await LocalStorage.RemoveItemAsync("AccountName");
+        await LocalStorage.RemoveItemAsync("id");
+        await LocalStorage.RemoveItemAsync("Email");
+        await LocalStorage.RemoveItemAsync("RoleId");
+        NavigationManager.NavigateTo("/Login", true);
+    }
+}

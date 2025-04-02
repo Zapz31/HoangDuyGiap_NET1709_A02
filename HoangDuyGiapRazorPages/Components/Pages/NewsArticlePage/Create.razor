@@ -1,0 +1,184 @@
+﻿@page "/NewsArticlePage/Create"
+@using FUNewsManagement_BOs
+@using FUNewsManagement_Repos
+@inject Blazored.LocalStorage.ILocalStorageService LocalStorage
+@inject NavigationManager NavigationManager
+@inject ICategoryRepo CategoryRepo
+@inject ITagRepo TagRepo
+@inject INewsArticleRepo NewsArticleRepo
+@* Lưu ý: Không cần sử dụng SignalR, do đó không inject IHubContext *@
+
+<h1>Create</h1>
+
+@if (!string.IsNullOrEmpty(Message))
+{
+    <h2 class="text-info">@Message</h2>
+}
+
+<EditForm Model="newsArticleModel" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    @* Hidden field cho NewsArticleId *@
+    <input type="hidden" @bind="newsArticleModel.NewsArticleId" />
+
+    <div class="form-group">
+        <label>News Title</label>
+        <InputText class="form-control" @bind-Value="newsArticleModel.NewsTitle" />
+    </div>
+
+    <div class="form-group">
+        <label>Headline</label>
+        <InputText class="form-control" @bind-Value="newsArticleModel.Headline" />
+    </div>
+
+    <div class="form-group">
+        <label>News Content</label>
+        <InputText class="form-control" @bind-Value="newsArticleModel.NewsContent" />
+    </div>
+
+    <div class="form-group">
+        <label>News Source</label>
+        <InputText class="form-control" @bind-Value="newsArticleModel.NewsSource" />
+    </div>
+
+    <div class="form-group">
+        <label>Category</label>
+        <InputSelect class="form-control" @bind-Value="newsArticleModel.CategoryId">
+            <option value="">Select Category</option>
+            @foreach (var category in categoryList)
+            {
+                <option value="@category.CategoryId">@category.CategoryName</option>
+            }
+        </InputSelect>
+    </div>
+
+    <div class="form-group">
+        <label>News Status</label>
+        <InputSelect class="form-control" @bind-Value="newsArticleModel.NewsStatus">
+            <option value="true">Active</option>
+            <option value="false">Inactive</option>
+        </InputSelect>
+    </div>
+
+    <div class="form-group">
+        <label>Select Tags</label>
+        @* Vì Blazor không hỗ trợ binding trực tiếp cho multiple select, nên chúng ta sử dụng sự kiện onchange *@
+        <select class="form-control" multiple @onchange="OnTagSelectionChanged">
+            @foreach(var tag in tagList)
+            {
+                <option value="@tag.TagId" selected="@selectedTagIds.Contains(tag.TagId)">
+                    @tag.TagName
+                </option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+</EditForm>
+
+<div>
+    <a href="/NewsArticlePage/Index">Back to List</a>
+</div>
+
+@code {
+    // Model binding cho form
+    private NewsArticle newsArticleModel = new NewsArticle();
+    // Danh sách tag được chọn (ID)
+    private List<int> selectedTagIds = new List<int>();
+
+    // Danh sách Categories và Tags để binding cho select list
+    private IEnumerable<Category> categoryList = new List<Category>();
+    private IEnumerable<Tag> tagList = new List<Tag>();
+
+    // Thông báo hiển thị cho người dùng
+    private string Message;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Kiểm tra thông tin đăng nhập từ LocalStorage thay vì Session
+        var email = await LocalStorage.GetItemAsync<string>("Email");
+        var role = await LocalStorage.GetItemAsync<int>("RoleId");
+        if (string.IsNullOrEmpty(email) || role != 1)
+        {
+            // Nếu không có quyền thì chuyển hướng đến trang lỗi
+            NavigationManager.NavigateTo("/Error");
+            return;
+        }
+
+        // Load danh sách Categories và Tags
+        categoryList = await CategoryRepo.GetList();
+        tagList = await TagRepo.GetList();
+    }
+
+    private async Task OnTagSelectionChanged(ChangeEventArgs e)
+    {
+        // Lấy danh sách giá trị được chọn từ element select
+        // Do Blazor không bind được list nên ta tự xử lý
+        if (e.Value is not null)
+        {
+            // e.Value trả về dạng string chứa các giá trị được chọn cách nhau dấu phẩy
+            var valueString = e.Value.ToString();
+            if (!string.IsNullOrEmpty(valueString))
+            {
+                selectedTagIds = valueString.Split(',')
+                                            .Select(s => int.TryParse(s, out var id) ? id : 0)
+                                            .Where(id => id != 0)
+                                            .ToList();
+            }
+            else
+            {
+                selectedTagIds.Clear();
+            }
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        if (selectedTagIds == null || !selectedTagIds.Any())
+        {
+            Message = "Please choose at least one tag for your news";
+            return;
+        }
+
+        try
+        {
+            // Xác thực các tag được chọn
+            var existingTags = await TagRepo.GetTagsByIds(selectedTagIds);
+            if (existingTags == null || !existingTags.Any())
+            {
+                Message = "Please choose at least one tag for your news";
+                return;
+            }
+
+            // Lấy thông tin user (id) từ LocalStorage
+            var sessionIdString = await LocalStorage.GetItemAsync<string>("id");
+            if (string.IsNullOrEmpty(sessionIdString))
+            {
+                NavigationManager.NavigateTo("/Login");
+                return;
+            }
+            if (!short.TryParse(sessionIdString, out short intSessionId))
+            {
+                NavigationManager.NavigateTo("/Login");
+                return;
+            }
+
+            // Gán các giá trị cần thiết cho NewsArticle
+            newsArticleModel.NewsArticleId = await NewsArticleRepo.GetNextNewsArticleID();
+            newsArticleModel.CreatedById = intSessionId;
+            newsArticleModel.CreatedDate = DateTime.Now;
+
+            // Thực hiện thêm bài viết
+            await NewsArticleRepo.AddNewsArticle(newsArticleModel, existingTags);
+
+            // Thông báo thành công và chuyển hướng
+            Message = "Create Successful";
+            NavigationManager.NavigateTo("/NewsArticlePage/Index");
+        }
+        catch (Exception ex)
+        {
+            Message = ex.Message;
+        }
+    }
+}

@@ -1,0 +1,104 @@
+﻿@page "/login"
+@using FUNewsManagement_BOs
+@using FUNewsManagement_Repos
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage
+@inject ISystemAccountRepo AccountRepo
+@inject IConfiguration Configuration
+@inject NavigationManager NavigationManager
+@inject Blazored.LocalStorage.ILocalStorageService LocalStorage
+
+<PageTitle>Login</PageTitle>
+
+<div class="text-center">
+    <h1 class="display-4">Login</h1>
+
+    @if (!string.IsNullOrEmpty(message))
+    {
+        <div class="text-danger">@message</div>
+    }
+
+    <EditForm Model="loginModel" OnValidSubmit="HandleLogin">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div>
+            <label>Email:</label>
+            <InputText @bind-Value="loginModel.Email" />
+        </div>
+        <div class="my-2">
+            <label>Password:</label>
+            <InputText type="password" @bind-Value="loginModel.Password" />
+        </div>
+        <button type="submit">Login</button>
+    </EditForm>
+</div>
+
+@code {
+    private LoginModel loginModel = new();
+    private string message = string.Empty;
+
+    private class LoginModel
+    {
+        public string Email { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
+    }
+
+    private async Task HandleLogin()
+    {
+        try
+        {
+            var adminID = Configuration["AdminAccount:AccountID"];
+            var adminEmail = Configuration["AdminAccount:email"];
+            var adminPassword = Configuration["AdminAccount:password"];
+            var adminAccountName = Configuration["AdminAccount:AccountName"];
+
+            // Check if the entered credentials match the admin account
+            if (loginModel.Email == adminEmail && loginModel.Password == adminPassword)
+            {
+                
+                message = "Admin Login Success";
+                Console.WriteLine("Admin Login Success");
+
+                // Set session for admin
+                if (adminAccountName != null && adminID != null)
+                {
+                    await LocalStorage.SetItemAsync("AccountName", adminAccountName);
+                    await LocalStorage.SetItemAsync("id", Convert.ToInt32(adminID));
+                }
+                await LocalStorage.SetItemAsync("Email", adminEmail);
+                await LocalStorage.SetItemAsync("RoleId", 3);
+
+                NavigationManager.NavigateTo("/NewsReportStatistics");
+            }
+            else
+            {
+                var account = await AccountRepo.Login(loginModel.Email, loginModel.Password);
+                if (account != null)
+                {
+                    
+                    message = "Login Success";
+                    Console.WriteLine("Login Success");
+
+                    // Set session
+                    await LocalStorage.SetItemAsync("id", account.AccountId);
+                    await LocalStorage.SetItemAsync("Email", loginModel.Email);
+                    await LocalStorage.SetItemAsync("RoleId", account.AccountRole ?? default(int));
+                    if (account.AccountName != null)
+                    {
+                        await LocalStorage.SetItemAsync("AccountName", account.AccountName);
+                    }
+
+                    NavigationManager.NavigateTo("/NewsArticlePage/Index");
+                }
+                else
+                {
+                    message = "You do not have permission to do this function";
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            message = ex.Message;
+        }
+    }
+}

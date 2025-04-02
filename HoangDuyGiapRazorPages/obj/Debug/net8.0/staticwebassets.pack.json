@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HoangDuyGiapRazorPages.bundle.scp.css",
+      "PackagePath": "staticwebassets\\HoangDuyGiapRazorPages.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\FPTU\\Semester VII\\PRN222\\assignment\\2_PRN222_Assignments\\Assignments\\assignment02\\HoangDuyGiap_NET1709_A02\\HoangDuyGiapRazorPages\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HoangDuyGiapRazorPages.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.HoangDuyGiapRazorPages.props",
+      "PackagePath": "build\\HoangDuyGiapRazorPages.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.HoangDuyGiapRazorPages.props",
+      "PackagePath": "buildMultiTargeting\\HoangDuyGiapRazorPages.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.HoangDuyGiapRazorPages.props",
+      "PackagePath": "buildTransitive\\HoangDuyGiapRazorPages.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
