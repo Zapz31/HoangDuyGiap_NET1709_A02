@@ -9,59 +9,59 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HoangDuyGiapRazorPages
 build_property.RootNamespace = HoangDuyGiapRazorPages
-build_property.ProjectDir = d:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\HoangDuyGiapRazorPages\
+build_property.ProjectDir = D:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\HoangDuyGiapRazorPages\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = d:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\HoangDuyGiapRazorPages
+build_property.MSBuildProjectDirectory = D:\FPTU\Semester VII\PRN222\assignment\2_PRN222_Assignments\Assignments\assignment02\HoangDuyGiap_NET1709_A02\HoangDuyGiapRazorPages
 build_property._RazorSourceGeneratorDebug = 
 
-[d:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/App.razor]
+[D:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/App.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/Counter.razor]
+[D:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb3VudGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/Error.razor]
+[D:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/Home.razor]
+[D:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/Login.razor]
+[D:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMb2dpbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/NewsArticlePage/Create.razor]
+[D:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/NewsArticlePage/Create.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOZXdzQXJ0aWNsZVBhZ2VcQ3JlYXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/NewsArticlePage/Index.razor]
+[D:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/NewsArticlePage/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOZXdzQXJ0aWNsZVBhZ2VcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/Weather.razor]
+[D:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Pages/Weather.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Routes.razor]
+[D:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/_Imports.razor]
+[D:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Layout/MainLayout.razor]
+[D:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-g17t8b6y5e
 
-[d:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Layout/NavMenu.razor]
+[D:/FPTU/Semester VII/PRN222/assignment/2_PRN222_Assignments/Assignments/assignment02/HoangDuyGiap_NET1709_A02/HoangDuyGiapRazorPages/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-hiuvcmstqm
